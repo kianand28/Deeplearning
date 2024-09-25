@@ -44,6 +44,6 @@ if st.button("Predict"):
     if input_text:
         text = input_text.split()[-3:]  # Get the last 3 words
         predicted_words = predict_next_n_words(model, tokenizer, text, n_words)
-        st.write(f"Predicted next {n_words} words: {' '.join(predicted_words)}")
+        st.write(f"Predicted next {n_words} words: {input_text + ' ' + ' '.join(predicted_words)}")
     else:
         st.write("Please enter a valid input.")
